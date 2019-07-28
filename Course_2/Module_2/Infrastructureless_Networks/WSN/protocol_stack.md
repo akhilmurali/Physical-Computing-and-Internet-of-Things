@@ -1,4 +1,4 @@
-# WSN Protocol stack
+# WSN Protocol stack (Revisit)
 
 Would have the same five layers as TCP/IP.
 - They need to be energy constraint
@@ -51,8 +51,8 @@ Would have the same five layers as TCP/IP.
   - Resources are limited
   - Network needs to be capable of adapting to new situations- lower the use of the scarce energy and memory - maintain the integrity of operation.
 - power control is needed to ascertain longetivity.
-- protocol place in sensor node architecture.
-- protocol availability. (Newer protocols are coming in everyday)
+- __protocol place__ in sensor node architecture.
+- __protocol availability__ (Newer protocols are coming in everyday)
 
 ### Error control
 - normally is present in all protocol layers
@@ -66,6 +66,7 @@ Would have the same five layers as TCP/IP.
 - Energy consumption is a major design constraint.
 
 ### Protocol Place (Time Sync, geo location)
+
 - Time synchronization, localization, calibration.
 - Where do the above algos fit in?
 - These information gathered is needed at multiple layers in the protocol stack.
