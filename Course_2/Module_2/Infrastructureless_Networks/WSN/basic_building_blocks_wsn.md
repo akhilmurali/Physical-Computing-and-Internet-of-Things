@@ -21,20 +21,6 @@ _Ex: Michigan Micro Mote –(M3) –2 x 4 x 4 mm3_
 - Memory 
 - Peripherals support
 
-### WSN Classification
-
-- Intelligent warehouses
-  - Has limited constraints (power and accessibility.)
-  - Used to monitor indoor spaces
-  - _Ex: Warehouse monitoring_
-- Environmental Monitoring
-  - Limited access to power
-  - Has constraints in maintenance and accesibility.
-  - _Ex: Redwood pine monitoring in australia_
-- Very large scale sensor network applications.
-  - Long duration monitoring 
-  - Mobile
-
 ### Diversity and Dynamics of Motes
 - In a given system different motes could be used.
 - Sensors availability determines preference for a task.
