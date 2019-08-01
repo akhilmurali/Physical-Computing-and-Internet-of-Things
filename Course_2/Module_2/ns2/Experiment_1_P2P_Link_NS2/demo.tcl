@@ -18,11 +18,11 @@ set udp0 [new Agent/UDP]
 $ns attach-agent $n0 $udp0 
 # The created agent is attached to node n0
 set cbr0 [new Application/Traffic/CBR]  
-# here we create a constant bit rate traffic source.
+# here we create a constant bit rate traffic generator.
 $cbr0 set packetSize_ 1000
 $cbr0 set interval_ 0.01
 $cbr0 attach-agent $udp0 
-#Attach the cbr traffic to udp source.
+#Attach the cbr traffic generator to udp traffic agent.
 
 set null0 [new Agent/Null] 
 $ns attach-agent $n1 $null0
