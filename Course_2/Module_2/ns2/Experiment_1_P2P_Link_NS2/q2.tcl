@@ -7,24 +7,24 @@
 #–if the data is being encoded and modulated –based on the encoding and modulation techniques the 
 #data rate will change.
 
-# No of packets that need to be sent per second would be 7372800/(256-48) = 35446.153 packets
+# No of packets that need to be sent per second would be 7372800/(2048-48) = 3686.4 packets
 
-#Data Rate = 256 bits * no.of packets per second.(35446.153)  = 9.074 Mbps == Approximately 10 Mbps
+#Data Rate = 256 bytes * no.of packets per second.(3686.4) * 8  = 7.549 Mbps == Approximately 8 Mbps
 
 ## NS 2 code for the condition:
 set ns [new Simulator]
-set nf [open out.nam w]
+set nf [open q2_out.nam w]
 $ns namtrace-all $nf
 proc finish {} {
     global ns nf  
     $ns flush-trace
     close $nf
-    exec nam out.nam 
+    exec nam q2_out.nam 
     &exit 0
 }
 set n0 [$ns node]
 set n1 [$ns node]
-$ns duplex-link $n0 $n1 10Mb 10ms DropTail
+$ns duplex-link $n0 $n1 8Mb 1ms DropTail
 # Create an agent object and attach it to a variable:
 # Agent are also referred to as traffic sources.
 # Agents are basic objects
@@ -33,8 +33,10 @@ $ns attach-agent $n0 $udp0
 # The created agent is attached to node n0
 set cbr0 [new Application/Traffic/CBR]  
 # here we create a constant bit rate traffic generator.
+# The packet size is expressed in bytes:
 $cbr0 set packetSize_ 256
-$cbr0 set interval_ 0.282 * 10^-6 
+# Interval = 1/3686.4 
+$cbr0 set interval_ 0.00028  
 $cbr0 attach-agent $udp0 
 #Attach the cbr traffic generator to udp traffic agent.
 
