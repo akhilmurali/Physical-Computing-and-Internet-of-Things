@@ -195,4 +195,6 @@ Memory is broken into pages and page size is divided into blocks.
 
 _Ex_: Block 0 of cache all pages are mapped to Block 0 of cache.
 
+## Set Associative Cache
+
 
